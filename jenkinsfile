@@ -11,6 +11,12 @@ pipeline {
             url : 'https://github.com/GhaithBalti/Devops-project.git'
                }
         }
+	stage('UNIT TEST') {
+         steps {
+            echo 'TEST PHASE IN PROGRESS'
+            sleep(3)
+              }
+        }
 	/*
         stage('Clean'){
             steps {
@@ -27,7 +33,6 @@ pipeline {
                }
             
         }
-	*/
         stage('Test'){
             steps {
     
@@ -35,7 +40,6 @@ pipeline {
                }
             
         }
-	/*
         stage('Sonar'){
             steps {
             withSonarQubeEnv( installationName: 'sonar'){
@@ -85,5 +89,6 @@ pipeline {
 	}
 
 */
+
     }
 }
